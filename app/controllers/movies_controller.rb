@@ -17,6 +17,16 @@ class MoviesController < ApplicationController
     redirect_to movies_url
   end
 
+  def edit
+    @movie = Movie.find(params[:id])
+  end
+
+  def update
+    @movie = Movie.find(params[:id])
+    @movie.update(movie_params)
+    redirect_to movies_url
+  end
+
   def destroy
     Movie.find(params[:id]).destroy
     redirect_to movies_url
