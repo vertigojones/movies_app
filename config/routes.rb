@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get '/movies', to: 'movies#index'
   get '/movies/new', to: 'movies#new'
+  get '/movies/:id', to: 'movies#show'
   post '/movies', to: 'movies#create'
   get '/movies/:id/edit', to: 'movies#edit'
   put '/movies/:id', to: 'movies#update'

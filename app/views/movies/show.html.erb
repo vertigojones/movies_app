@@ -1,0 +1,11 @@
+<h1><%= @movie.title %></h1>
+<hr />
+<div><%= image_tag @movie.picture %></div>
+<div>Genre: <%= @movie.genre %></div>
+<div>Year: <%= @movie.year %></div>
+<div>Synopsis: <%= @movie.synopsis %></>
+<br />
+<a href="/movies/<%= @movie.id %>/edit">Edit Movie</a>
+<br />
+<%= button_to "Delete Movie", "/movies/#{@movie.id}", :method => :delete %>
+<br />
